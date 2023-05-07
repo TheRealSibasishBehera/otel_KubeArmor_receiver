@@ -82,7 +82,7 @@ Examine the logs to see that it is properly running.
 For this tutorial we would be making use of the minikube kubernetes environment
 
 #### Steps:
-- ##### Follow [previous step](https://github.com/Chinwendu20/OTel-receiver/blob/otel/example/tutorial.md#create-a-custom-opentelemetry-collector-distribution) on creating custom opentelemetry collector.
+- ##### Follow [previous step](https://github.com/Chinwendu20/OTel-receiver/blob/otel/example/tutorial.md#create-a-custom-opentelemetry-collector-distribution) on creating custom opentelemetry collector (optional)
 - ##### Follow the steps in this [markdown](https://github.com/kubearmor/KubeArmor/tree/main/deployments/k3s) to deploy kubearmor in k3s environemnt
 - ##### Install opentelemetry operator. Follow these steps:
 
