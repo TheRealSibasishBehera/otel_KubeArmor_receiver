@@ -5,6 +5,19 @@ I would be explaining the two ways in which you can try out this example in both
 
 ### KUBEAMOR ON BARE METAL
 
+### Easy way
+
+1. Pull custom collector collector for this tutorial
+
+```bash
+docker pull chinwendu20/receiver
+```
+3. Run container on host network
+
+```bash
+docker run --net=host chinwendu20/receiver
+```
+
 #### Requirements:
 
 We would be creating an opentelemetry collector to test out the receiver. The OpenTelemetry Collector offers a vendor-agnostic implementation of how to receive, process and export telemetry data. Read more about it in the [docs](https://opentelemetry.io/docs/collector/). There are different versions:
@@ -83,7 +96,9 @@ For this tutorial we would be making use of the minikube kubernetes environment
 
 - Create custom collector container
 
-Note: I have created a container already and have included it in the kubernetes manifest file in this tutorial. You can skip this step if you want and use that instead.
+**NOTE:**  For easy way skip to [4](#4-deploy-the-collector-in-your-cluster)
+
+
 
 1. Build custom collector docker image. We would be using the [Dockerfile](../Dockerfile) to build the image. Ensure you are in the `example` directory. Run this command:
      ```
@@ -99,7 +114,7 @@ docker push <docker username>/<image name>
 ```
 3. Replace the container name in this [line](../collector-k8-manifest.yml) with your container name.
 
-4. Deploy the collector in your cluster
+##### 4. Deploy the collector in your cluster
 
 ```bash
 kubectl apply -f collector-k8-manifest.yml
