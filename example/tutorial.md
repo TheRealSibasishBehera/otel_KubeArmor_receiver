@@ -81,9 +81,9 @@ For this tutorial we would be making use of the minikube kubernetes environment
 ```
 (Reference: [Opentelemetry operator readme](https://github.com/open-telemetry/opentelemetry-operator))
 
-- Create custom collector container
+- ##### Create custom collector container
 
-Note: I have created a container already and have included it in the kubernetes manifest file in this tutorial. You can skip this step if you want and use that instead.
+**Note: I have created a container already and have included it in the kubernetes manifest file in this tutorial. You can skip this step if you want and use that instead. Skip to [4]( #Deploy the collector in your cluster)**
 
 1. Build custom collector docker image. We would be using the [Dockerfile](Dockerfile) to build the image. Ensure you are in the `example` directory. Run this command:
      ```
@@ -99,7 +99,7 @@ docker push <docker username>/<image name>
 ```
 3. Replace the container name in this [line](collector-k8-manifest.yml) with your container name.
 
-4. Deploy the collector in your cluster
+4. ##### Deploy the collector in your cluster
 
 ```bash
 kubectl apply -f collector-k8-manifest.yml
